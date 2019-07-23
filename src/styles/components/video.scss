@@ -1,0 +1,22 @@
+.boxVideo{
+    width: 50%;
+    margin-bottom: em(30);
+    &:nth-child(2n){
+        .space{
+            padding-right: em(45);
+        }
+    }
+    &:nth-child(2n + 1){
+        .space{
+            padding-left: em(45);
+        }
+    }
+    .space{
+        padding: 0 em(15);
+        .content{
+            height: em(200);
+            background: #f00;
+            border: em(1) solid $corMarrom;
+        }
+    }
+}

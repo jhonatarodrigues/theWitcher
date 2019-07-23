@@ -1,0 +1,23 @@
+.navigation{
+    padding-top: em(120);
+    width: 100%;
+    max-width: em(250);
+    li{
+        width: 100%;
+        margin-bottom: em(15);
+        &:last-child{
+            margin-bottom: 0;
+        }
+        button{
+            width: 100%;
+            border: none;
+            color: #fff;
+        }
+        &.activeNav{
+            button{
+                border: em(1) solid $corMarrom;
+                color: $corMarrom;
+            }
+        }
+    }
+}
