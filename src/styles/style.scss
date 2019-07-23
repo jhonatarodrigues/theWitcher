@@ -1,7 +1,16 @@
 @import '_cssReset';
 @import '_mixins';
+@import '_variables';
 
+// -- css Padrao dos componentes
+@import './components/input';
+@import './components/button';
+
+
+// -- comum a todos
+@import '_common.scss';
 
 
 // -- pages
 @import './pages/login';
+@import './pages/home';

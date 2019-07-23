@@ -1,0 +1,10 @@
+button{
+    padding: em(13) em(40);
+    background: none;
+    border: em(1) solid $corMarrom;
+    color: $corMarrom;
+    @extend .fontArial;
+    font-size: em(12);
+    text-transform: uppercase;
+    font-weight: 200;
+}

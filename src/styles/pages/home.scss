@@ -1,0 +1,13 @@
+.pageHome{
+    height: 100vh;
+    display: flex;
+    .leftColumn{
+        width: 100%;
+        max-width: em(350);
+        min-width: em(350);
+        background: #0f0;
+    }
+    .rightColumn{
+        width: 100%;
+    }
+}
