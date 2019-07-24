@@ -13,6 +13,7 @@
     }
     .space{
         padding: 0 em(15);
+        cursor: pointer;
         .content{
             height: em(200);
             background: #f00;
@@ -22,7 +23,6 @@
             display: flex;
             align-items: flex-end;
             .title{
-                
                 padding: em(20) em(15);
                 background: rgba(0,0,0,0.6);
                 text-align: center;
@@ -30,7 +30,25 @@
                 color: #fff;
                 width: 100%;
                 font-size: em(12);
+                @include animate(.2);
+            }
+        }
+        &:hover{
+            .content{
+                .title{
+                    @include animate(.4);
+                    padding-bottom: em(40);
+                }
             }
         }
     }
+}
+
+.ReactModal__Overlay{
+    background-color: rgba(14, 4, 4, 0.8) !important;
+}
+.ReactModal__Content{
+    background: #000!important;
+    border-radius: 0!important;
+    border: em(1) solid $corMarrom!important;
 }
