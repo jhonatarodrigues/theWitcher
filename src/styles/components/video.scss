@@ -1,18 +1,30 @@
 .boxVideo{
     width: 50%;
-    margin-bottom: em(30);
+    margin-bottom: em(15);
+    @include responsive($md){
+        margin-bottom: em(30);
+    }
     &:nth-child(2n){
         .space{
-            padding-right: em(45);
+            padding-right: em(30);
+            @include responsive($md){
+                padding-right: em(45);
+            }
         }
     }
     &:nth-child(2n + 1){
         .space{
-            padding-left: em(45);
+            padding-left: em(30);
+            @include responsive($md){
+                padding-left: em(45);
+            }
         }
     }
     .space{
-        padding: 0 em(15);
+        padding: 0 em(7.5);
+        @include responsive($md){
+            padding: 0 em(15);
+        }
         cursor: pointer;
         .content{
             height: em(200);
@@ -29,8 +41,12 @@
                 @extend .fontArial;
                 color: #fff;
                 width: 100%;
-                font-size: em(12);
+                font-size: em(14);
+                line-height: em(18);
                 @include animate(.2);
+                @include responsive($md){
+                    font-size: em(12);
+                }
             }
         }
         &:hover{
@@ -51,4 +67,12 @@
     background: #000!important;
     border-radius: 0!important;
     border: em(1) solid $corMarrom!important;
+    iframe{
+        width: 100%;
+        height: em(200);
+        @include responsive($md){
+            width: em(800);
+            height: em(400);
+        }
+    }
 }

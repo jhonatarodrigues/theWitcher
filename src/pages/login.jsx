@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {dark as Logo} from '../components/logo'
 import Input from '../components/input'
 import Button from '../components/button'
+import { Link } from "react-router-dom";
 
 class login extends Component {
     render() {
@@ -24,7 +25,9 @@ class login extends Component {
                             legenda = "Password"
                         />
                         <div className="contentButton">
-                            <Button type='submit' title='Login'  />
+                            <Link to='/home'>
+                                <Button type='button' title='Login'  />
+                            </Link>
                         </div>
                     </form>
                 </div>

@@ -8,10 +8,14 @@
     .content{
         position: relative;
         z-index: 2;
-        max-width: em(300);
+        max-width: em(250);
+        @include responsive($md){
+            max-width: em(300);
+        }
         .logo{
             img{
                 max-width: em(300);
+                width: 100%;
             }
         }
         .contentButton{

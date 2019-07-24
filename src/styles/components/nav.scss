@@ -1,22 +1,98 @@
-.navigation{
-    padding-top: em(120);
+.contentNavegacao{
     width: 100%;
-    max-width: em(250);
-    li{
-        width: 100%;
-        margin-bottom: em(15);
-        &:last-child{
-            margin-bottom: 0;
+    position: relative;
+    @include responsive($md){
+        display: flex;
+        justify-content: center;
+    }
+    .sanduichMobile{
+        width: em(30);
+        position: absolute;
+        right: em(30);
+        top: em(-30);
+        transform: translateY(-100%);
+        display: block;
+        @include responsive($md){
+            display: none;
         }
-        button{
+        .line{
             width: 100%;
-            border: none;
-            color: #fff;
+            height: em(3);
+            margin-bottom: em(3);
+            background: $corMarrom;
+            @include animate(.2);
         }
-        &.activeNav{
+        &.mobileActiveNav{
+            .line{
+                @include animate(.4);
+                &:first-child{
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    transform: rotate(45deg);
+                    margin-top: em(-11);
+                }
+            }
+        }
+    }
+    .navigation{
+        padding: em(70) 0 0;
+        width: 100%;
+        position: fixed;
+        z-index: 200;
+        background: $corMarrom;
+        height: 100vh;
+        width: 80vw;
+        top: 0;
+        left: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(-100%);
+        @include animate(.2);
+        @include responsive($md){
+            padding-top: em(120);
+            width: 100%;
+            max-width: em(250);
+            position: relative;
+            transform: translate(0);
+            background: none;
+            width: 100%;
+        }
+        &.mobileActiveNav{
+            @include animate(.4);
+            transform: translate(0%);
+        }
+        li{
+            width: 80%;
+            @include responsive($md){
+                width: 100%;
+            }
+            margin-bottom: em(15);
+            &:last-child{
+                margin-bottom: 0;
+            }
             button{
-                border: em(1) solid $corMarrom;
-                color: $corMarrom;
+                width: 100%;
+                border: none;
+                color: #fff;
+            }
+            &.activeNav{
+                button{
+                    border: em(1) solid #fff;
+                    color: #fff;
+                    @include responsive($md){
+                        border: em(1) solid $corMarrom;
+                        color: $corMarrom;
+                    }
+                    &:hover{
+                        color: #fff;
+                    }
+                }
             }
         }
     }

@@ -7,7 +7,13 @@ button{
     font-size: em(12);
     text-transform: uppercase;
     font-weight: 200;
+    @include animate(.2);
     &.removeButton{
         display: none!important;
+    }
+    &:hover{
+        @include animate(.4);
+        background: $corMarrom;
+        color: #fff;
     }
 }

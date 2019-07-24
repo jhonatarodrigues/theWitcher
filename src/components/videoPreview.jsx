@@ -56,7 +56,7 @@ class video extends Component {
                         contentLabel="Example Modal"
                         >
                 
-                        <iframe title={this.props.title} style={{ width: 800, height: 400}} src={'https://www.youtube.com/embed/' + this.props.video} ></iframe>
+                        <iframe title={this.props.title}  src={'https://www.youtube.com/embed/' + this.props.video} ></iframe>
                     </Modal>
                 </div>
             </div>
