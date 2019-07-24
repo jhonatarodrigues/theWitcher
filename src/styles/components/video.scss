@@ -17,6 +17,20 @@
             height: em(200);
             background: #f00;
             border: em(1) solid $corMarrom;
+            background-size: cover!important;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            .title{
+                
+                padding: em(20) em(15);
+                background: rgba(0,0,0,0.6);
+                text-align: center;
+                @extend .fontArial;
+                color: #fff;
+                width: 100%;
+                font-size: em(12);
+            }
         }
     }
 }
