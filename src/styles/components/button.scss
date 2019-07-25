@@ -8,6 +8,7 @@ button{
     text-transform: uppercase;
     font-weight: 200;
     @include animate(.2);
+    cursor: pointer;
     &.removeButton{
         display: none!important;
     }
